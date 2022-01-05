@@ -1,0 +1,17 @@
+extends base.pug
+block scripts
+  script(src='/views/index.js')
+block style 
+  style 
+   include ../static/contactstyle.css
+   include ../static/style.css
+block content 
+    h1 Contact Us:
+    form(action="/contact",method="post")
+        input(type="text",class="myinput",name="name",placeholder="Enter Your Name")
+        input(type="email",class="myinput",name="email",placeholder="Enter Your Email")
+        input(type="phone",class="myinput",name="phone",placeholder="Enter Your Phone")
+        input(type="text",class="myinput", name="suggest",placeholder="Enter Your Message")
+
+        button(class="btn")
+            |Submit
